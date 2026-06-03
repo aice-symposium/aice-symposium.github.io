@@ -291,4 +291,5 @@ sup a:hover {
   font-size: 1.08rem;
   color: var(--primary);
   line-height: 1.85;
+   font-weight: 600;
 }
