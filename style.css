@@ -1,0 +1,294 @@
+/* AICE-26 Symposium Website
+   Academic style: clean, readable, understated.
+*/
+
+:root {
+  --primary:    #16395c;
+  --accent:     #2e6da4;
+  --accent-soft:#e8eef5;
+  --ink:        #1c2733;
+  --light-bg:   #f6f8fb;
+  --border:     #dbe2ec;
+  --border-2:   #c5d0de;
+  --text-muted: #5a6675;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* offset for sticky nav anchor jumps */
+section[id] { scroll-margin-top: 70px; }
+
+/* ---- Header ---- */
+.site-header {
+  background: #16395c;
+  color: #fff;
+  padding: 2.2rem 0 1.8rem;
+  text-align: left;
+  border-bottom: none;
+}
+
+.symposium-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.5rem;
+}
+
+.symposium-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.symposium-subtitle {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+/* ---- Sticky nav ---- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.site-nav .nav {
+  padding: 0.5rem 0;
+  gap: 0.2rem;
+}
+
+/* Plain text nav links — no pills */
+.site-nav .nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.4rem 0.9rem;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-nav .nav-link:hover {
+  color: var(--primary);
+  background: none;
+  border-bottom-color: var(--border-2);
+}
+
+.site-nav .nav-link.active {
+  color: var(--primary);
+  background: none;
+  font-weight: 700;
+  border-bottom-color: var(--accent);
+}
+
+/* ---- Section headings ---- */
+.section-heading {
+  font-size: 1.35rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+}
+
+.subsection-heading {
+  font-size: 1.05rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+/* lead questions */
+.lead-question {
+  border-left: 3px solid var(--border-2);
+  padding-left: 1.1rem;
+  margin: 1.2rem 0;
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ---- Day headings ---- */
+.day-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---- Topic lists ---- */
+#topics ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+#topics li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---- Programme table ---- */
+.programme-table {
+  font-size: 0.94rem;
+  border: 1px solid var(--border);
+}
+
+.programme-table thead th {
+  background: var(--light-bg);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: 1px solid var(--border-2);
+  padding: 0.6rem 0.9rem;
+}
+
+.programme-table td {
+  padding: 0.65rem 0.9rem;
+  vertical-align: top;
+  border-color: var(--border);
+}
+
+.programme-table td u {
+  text-decoration: underline;
+  font-weight: normal;
+  color: var(--ink);
+}
+
+/* session band rows */
+.programme-table .session-row td {
+  background: var(--light-bg);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-top: 1px solid var(--border-2);
+  padding: 0.5rem 0.9rem;
+}
+
+.programme-table .session-row td br { display: none; }
+
+.roundtable td {
+  background: var(--accent-soft);
+}
+
+/* ---- Committee list ---- */
+.committee-list li {
+  padding: 0.25rem 0;
+  font-size: 0.97rem;
+}
+
+.committee-list strong {
+  color: var(--accent);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--light-bg);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+.site-footer a:hover { color: var(--primary); }
+
+/* ---- Links ---- */
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+a:hover { color: var(--primary); }
+
+/* ---- Layout ---- */
+.container { max-width: 820px; }
+
+/* ---- Back to top ---- */
+.back-to-top {
+  position: fixed;
+  right: 1.4rem;f
+  bottom: 1.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(22,57,92,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.back-to-top.show {
+  opacity: 0.9;
+  pointer-events: auto;
+}
+
+.back-to-top:hover { background: var(--accent); color: #fff; }
+
+/* ---- Responsive ---- */
+@media (max-width: 576px) {
+  .symposium-title { font-size: 1.4rem; }
+  .site-header { padding: 1.6rem 0 1.2rem; }
+  .programme-table { font-size: 0.88rem; }
+  .programme-table td, .programme-table thead th { padding: 0.5rem 0.6rem; }
+}
+
+/* ---- References ---- */
+.references-list {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  padding-left: 1.5rem;
+}
+
+.references-list li {
+  margin-bottom: 0.7rem;
+}
+
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+sup a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Intro summary ---- */
+.intro-summary {
+  font-size: 1.08rem;
+  color: var(--primary);
+  line-height: 1.85;
+}
