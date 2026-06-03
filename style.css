@@ -288,7 +288,8 @@ sup a:hover {
 
 /* ---- Intro summary ---- */
 .intro-summary {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   color: var(--primary);
   line-height: 1.85;
+   font-weight: 600;
 }
